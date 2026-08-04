@@ -99,6 +99,18 @@ body {
   text-align: left;
 }
 
+.prose-post .columns {
+  display: flex;
+  gap: 1.25rem;
+  margin: 1.25rem 0;
+  align-items: flex-start;
+}
+
+.prose-post .column {
+  flex: 1;
+  min-width: 0;
+}
+
 .prose-post .callout {
   display: flex;
   gap: 0.6rem;

@@ -139,11 +139,11 @@ async function blockToHtml(block: BlockObjectResponse): Promise<string> {
     case "paragraph":
       return `<p>${richTextToHtml(block.paragraph.rich_text)}</p>`;
     case "heading_1":
-      return `<h1>${richTextToHtml(block.heading_1.rich_text)}</h1>`;
+      return `<h1>${richTextToHtml(block.heading_1.rich_text)}</h1>${childrenHtml}`;
     case "heading_2":
-      return `<h2>${richTextToHtml(block.heading_2.rich_text)}</h2>`;
+      return `<h2>${richTextToHtml(block.heading_2.rich_text)}</h2>${childrenHtml}`;
     case "heading_3":
-      return `<h3>${richTextToHtml(block.heading_3.rich_text)}</h3>`;
+      return `<h3>${richTextToHtml(block.heading_3.rich_text)}</h3>${childrenHtml}`;
     case "quote":
       return `<blockquote>${richTextToHtml(block.quote.rich_text)}${childrenHtml}</blockquote>`;
     case "callout": {
@@ -204,6 +204,16 @@ async function blockToHtml(block: BlockObjectResponse): Promise<string> {
         .join("");
       return `<tr>${cells}</tr>`;
     }
+    case "column_list":
+      return `<div class="columns">${childrenHtml}</div>`;
+    case "column":
+      return `<div class="column">${childrenHtml}</div>`;
+    case "synced_block":
+      return childrenHtml;
+    case "table_of_contents":
+      return "";
+    case "equation":
+      return `<p><code>${escapeHtml(block.equation.expression)}</code></p>`;
     default:
       return "";
   }

@@ -15,12 +15,11 @@ export default function AboutPage() {
         </div>
         <h1 className="text-xl font-medium mb-2">Allie's Finance</h1>
         <p className="text-sm text-muted max-w-md leading-relaxed">
-          No introduction yet. 
-
-          Interested in trade, finance, and technology (blockchain, engineering),
-          with analysis in companies and industries. 
-          
-          If you want to get in touch...
+            Interested in trade, finance, and technology (blockchain, engineering).
+            <br />
+            Currently studying a related major; uploading company analysis reports written at QVBE, along with essays.
+            <br />
+            This website serves as a personal repository.
         </p>
       </div>
     </div>

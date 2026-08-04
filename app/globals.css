@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+::selection {
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.prose-post {
+  color: #111111;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.prose-post h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+}
+
+.prose-post h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 1.75rem 0 0.9rem;
+}
+
+.prose-post h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.prose-post p {
+  margin: 0.9rem 0;
+}
+
+.prose-post img {
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.prose-post blockquote {
+  border-left: 3px solid #111111;
+  padding-left: 1rem;
+  color: #555555;
+  margin: 1.25rem 0;
+}
+
+.prose-post code {
+  background: #f2f2f2;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.prose-post pre {
+  background: #111111;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+}
+
+.prose-post pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+.prose-post ul,
+.prose-post ol {
+  margin: 0.9rem 0;
+  padding-left: 1.4rem;
+}
+
+.prose-post li {
+  margin: 0.35rem 0;
+}
+
+.prose-post table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.9rem;
+}
+
+.prose-post th,
+.prose-post td {
+  border: 1px solid #e5e5e5;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.prose-post .callout {
+  display: flex;
+  gap: 0.6rem;
+  background: #f7f7f5;
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  margin: 1.25rem 0;
+}
+
+.prose-post .callout-icon {
+  flex-shrink: 0;
+}
+
+.prose-post .file-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  margin: 1.25rem 0;
+  text-decoration: none;
+  color: #111111;
+}
+
+.prose-post .file-card:hover {
+  border-color: #111111;
+}
+
+.prose-post .file-card-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: #111111;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.02em;
+}
+
+.prose-post .file-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.prose-post .file-card-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.prose-post .file-card-meta {
+  font-size: 0.8rem;
+  color: #8a8a8a;
+}
+
+.prose-post .todo-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.prose-post .todo {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.prose-post details {
+  margin: 1rem 0;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+}
+
+.prose-post summary {
+  cursor: pointer;
+  font-weight: 500;
+}

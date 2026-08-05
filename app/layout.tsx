@@ -4,8 +4,8 @@ import Image from "next/image";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Allie's Finance",
-  description: "기업 분석과 포트폴리오 인사이트"
+  title: "흰색이의 금융 이야기",
+  description: "산업/기업 분석과 포트폴리오 인사이트"
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
                   className="object-cover"
                 />
               </span>
-              <span className="font-medium text-[17px]">Allie's Finance</span>
+              <span className="font-medium text-[17px]">흰색이의 금융 이야기</span>
             </Link>
             <nav className="text-sm text-neutral-600">
               <Link href="/about" className="hover:text-ink transition-colors">
@@ -38,7 +38,7 @@ export default function RootLayout({
           </header>
           <main className="py-8">{children}</main>
           <footer className="py-10 text-center text-xs text-muted border-t border-line mt-10">
-            © {new Date().getFullYear()} Allie's Finance
+            © {new Date().getFullYear()} 흰색이의 금융 이야기
           </footer>
         </div>
       </body>

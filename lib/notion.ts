@@ -277,15 +277,22 @@ function getDateValue(page: PageObjectResponse): string | null {
 
 function getStatusValue(page: PageObjectResponse): string | null {
   const props = page.properties;
+
+  // 1순위: 이름이 정확히 "상태"인 속성 (타입 무관)
+  const named = props["상태"];
+  if (named) {
+    if (named.type === "status" && named.status?.name) return named.status.name;
+    if (named.type === "select" && named.select?.name) return named.select.name;
+  }
+
+  // 2순위: Notion의 전용 "상태(status)" 타입 속성 (이름이 달라도 찾음)
   for (const key of Object.keys(props)) {
     const prop = props[key];
     if (prop.type === "status" && prop.status?.name) {
       return prop.status.name;
     }
-    if (prop.type === "select" && prop.select?.name) {
-      return prop.select.name;
-    }
   }
+
   return null;
 }
 
